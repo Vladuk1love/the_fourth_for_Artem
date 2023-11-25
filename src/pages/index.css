@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Cyrillic Old Face';
+  src: local('cyrillicoldface.ttf'),
+    url('../fonts/cyrillicoldface.ttf') format('truetype');
+  font-weight: bold;
+}
+
+.font-cyrill-script{
+    font-family: 'Cyrillic Old Face', serif;
+    font-size: 25px;
+}
+.font-cyrill-script-heading{
+    font-family: 'Cyrillic Old Face', serif;
+    font-size: 70px;
+
+}
+
+.completed{
+    display: block;
+}
+.uncompleted{
+    display: none;
+}
