@@ -15,6 +15,8 @@ import {
 export const Home = () => {
     const [todos, setTodos] = useState([])
     const [text, setText] = useState('')
+    const [todosTemp, setTemp] = useState([])
+
 
     useEffect(()=>{
             setTodos(todos)
@@ -57,6 +59,18 @@ export const Home = () => {
         setTodos((prevState) => [...prevState])
     }
 
+    // const filtrElemenst = (par) =>{
+    //     todos.map((todo) => {
+    //         if (todo.elemStatus === "completed") {
+    //             setComleted( (todosComleted) => [...todosComleted])
+    //         }else {setUncomleted( (todosUncomleted) => [...todosUncomleted])}
+    //         }
+    //     )
+    //     if(par===1){setComleted(todosComleted)}
+    //     if(par===0){setUncomleted(todosUncomleted)}
+    //     if(par===2){setTodos(todos)}
+    //     setTodos((prevState) => [...prevState])
+    // }
     const filtrElemenst = (par) =>{
         let todosComleted = []
         let todosUncomleted = []
@@ -66,10 +80,11 @@ export const Home = () => {
             }else {todosUncomleted.push(todo)}
             }
         )
+        setTemp(todos)
         if(par===1){setTodos(todosComleted)}
         if(par===0){setTodos(todosUncomleted)}
-        if(par===2){setTodos(todos)}
-        setTodos((prevState) => [...prevState])
+        if(par===2){setTodos(todosTemp)}
+
     }
 
     return (
