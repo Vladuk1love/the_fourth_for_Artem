@@ -59,18 +59,6 @@ export const Home = () => {
         setTodos((prevState) => [...prevState])
     }
 
-    // const filtrElemenst = (par) =>{
-    //     todos.map((todo) => {
-    //         if (todo.elemStatus === "completed") {
-    //             setComleted( (todosComleted) => [...todosComleted])
-    //         }else {setUncomleted( (todosUncomleted) => [...todosUncomleted])}
-    //         }
-    //     )
-    //     if(par===1){setComleted(todosComleted)}
-    //     if(par===0){setUncomleted(todosUncomleted)}
-    //     if(par===2){setTodos(todos)}
-    //     setTodos((prevState) => [...prevState])
-    // }
     const filtrElemenst = (par) =>{
         let todosComleted = []
         let todosUncomleted = []
